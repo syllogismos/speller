@@ -1,0 +1,22 @@
+application: forrbackend
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- appstats: on
+
+
+handlers:
+- url: /favicon\.ico
+  static_files: /favicon.ico
+  upload: /favicon\.ico
+- url: /words
+  static_files: words.txt
+  upload: words.txt
+- url: /t.*
+  script: trainer.py
+- url: /w.*
+  script: alternatewords.py
+- url: /.*
+  script: speller.py

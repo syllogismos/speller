@@ -1,0 +1,9 @@
+backends:
+- name: timetest
+  options: public,dynamic
+  class: B2
+  instances: 4
+  start: alternatewords.py
+- name: backend
+  options: public,dynamic
+  class: B2
